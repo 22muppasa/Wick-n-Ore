@@ -69,10 +69,73 @@
 }
 
 #gradientOverlay {
-  position: absolute;
-  bottom: 250px; /* Move the gradient up by 150px */
+  position: relative;
+  bottom: 100%; 
   width: 100%;
-  height: 350px; /* Increase the height to ensure it still covers the bottom part */
+  height: 350px; 
   background: linear-gradient(to bottom, transparent, #212F2F);
-  z-index: 2; /* Positioned above the background image but below the content */
+  z-index: 2; 
+}
+@media (max-width:  1030px) {
+  #module1container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #module1Content {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  #typed-text, #module1Text, #module1Button {
+    max-width: 100%;
+  }
+  
+  #module1Background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #gradientOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+    z-index: -1;
+  }
+  
+  @media (max-width: 1030px) {
+    #typed-text {
+      font-size: 2rem;
+    }
+  
+    #module1Text {
+      font-size: 1rem;
+    }
+  
+    #module1Button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  #typed-text {
+    font-size: 2em;
+  }
+  #module1Text{
+    font-size: 1rem;
+  }
+  #module1Button {
+    font-size: 1rem;
+    padding: 10px 20px
+  }
 }
